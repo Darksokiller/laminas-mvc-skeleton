@@ -14,4 +14,10 @@
 
 return [
     // ...
+    'db' => [
+        'driver'   => 'Pdo',
+        'dsn'      => 'mysql:dbname=laminas-db;host=localhost;charset=utf8',
+        'username' => 'root',
+        'password' => '',
+     ],
 ];
