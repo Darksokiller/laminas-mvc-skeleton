@@ -5,6 +5,7 @@ use Laminas\Router\Http\Segment;
 
 return [
     // The following section is new and should be added to your file:
+    
     'router' => [
         'routes' => [
             'album' => [

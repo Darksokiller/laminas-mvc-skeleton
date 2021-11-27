@@ -17,7 +17,7 @@ class Module implements ConfigProviderInterface
         return [
             'factories' => [
                 Model\AlbumTable::class => function($contaliner) {
-                    $tableGateway = $contaliner->get(Model\AlbumTableTableGateway::class);
+                    $tableGateway = $contaliner->get(Model\AlbumTableGateway::class);
                     return new Model\AlbumTable($tableGateway);
                 },
                 Model\AlbumTableGateway::class => function ($container) {
@@ -38,13 +38,9 @@ class Module implements ConfigProviderInterface
                Controller\AlbumController::class => function($container) {
                    return new Controller\AlbumController(
                        $container->get(Model\AlbumTable::class)
-                  );
-               }
-           ],
-       ];
+                       );
+               },
+               ],
+               ];
     }
-    
-    
-    
-    
 }
