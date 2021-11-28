@@ -2,6 +2,7 @@
 namespace Album;
 
 use Laminas\Router\Http\Segment;
+use Album\Controller\AlbumController;
 
 return [
     // The following section is new and should be added to your file:
@@ -17,7 +18,7 @@ return [
                         'id'     => '[0-9]+',
                     ],
                     'defaults' => [
-                        'controller' => Controller\AlbumController::class,
+                        'controller' => AlbumController::class,
                         'action'     => 'index',
                     ],
                 ],
